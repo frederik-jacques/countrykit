@@ -4,6 +4,7 @@
 
 [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Ffrederik-jacques%2Fcountrykit%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/frederik-jacques/countrykit)
 [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Ffrederik-jacques%2Fcountrykit%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/frederik-jacques/countrykit)
+[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Ffrederik-jacques%2Fcountrykit%2Fbadge%3Fref%3Dmain&style=flat)](https://actions-badge.atrox.dev/frederik-jacques/countrykit/goto?ref=main)
 
 CountryKit is a Swift library for iOS, macOS, Linux, tvOS & watchOS with all continents, regions, subregions & countries of the world according to [Standard Country or Area Codes for Statistical Use (also known as UN M49)](https://en.wikipedia.org/wiki/UN_M49).
 
