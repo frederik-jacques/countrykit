@@ -2,9 +2,13 @@
 <img src="https://getbillie.app/wp-content/uploads/countrykit-github-logo.png" width="400px" height="537px" alt="CountryKit Logo" />
 </p>
 
-CountryKit is a Swift library with all continents, regions, subregions & countries of the world according to [Standard Country or Area Codes for Statistical Use (also known as UN M49](https://en.wikipedia.org/wiki/UN_M49).
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Ffrederik-jacques%2Fcountrykit%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/frederik-jacques/countrykit)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Ffrederik-jacques%2Fcountrykit%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/frederik-jacques/countrykit)
+
+CountryKit is a Swift library for iOS, macOS, Linux, tvOS & watchOS with all continents, regions, subregions & countries of the world according to [Standard Country or Area Codes for Statistical Use (also known as UN M49)](https://en.wikipedia.org/wiki/UN_M49).
+
 Country data contains:
-* English name + localization function based on locale 
+* English name + localisation function based on locale 
 * Phone number prefix
 * Country code
 * alpha-2 code
@@ -22,7 +26,7 @@ Country data contains:
 
 ## Requirements
 
-- iOS 14.0+ / macOS 12+
+- iOS / macOS / tvOS / watchOS & Linux
 - Xcode 11.0+
 - Swift 5.0+
 
