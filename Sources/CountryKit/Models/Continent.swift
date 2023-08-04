@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum Continent {
+public enum Continent: CaseIterable {
     
     case africa
     case americas
