@@ -32,4 +32,9 @@ final class ContinentTests: XCTestCase {
 
         XCTAssertEqual(expected, Continent.allCases)
     }
+
+    func test_stringness() throws {
+        XCTAssertEqual("Oceania", Continent.oceania.rawValue)
+        XCTAssertEqual("Oceania", "\(Continent.oceania)")
+    }
 }
