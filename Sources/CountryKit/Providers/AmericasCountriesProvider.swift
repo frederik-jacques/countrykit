@@ -8,7 +8,8 @@
 import Foundation
 
 public struct AmericasCountriesProvider: CountryProvidable {
-    
+    public init() {}
+
     public let countries = [
         Country(continent: .americas, region: .northAmerica, subregion: .northernAmerica, name: "Bermuda", code: 60, alpha2Code: "BM", alpha3Code: "BMU", phoneExtension: "1 (441)"),
         Country(continent: .americas, region: .northAmerica, subregion: .northernAmerica, name: "Canada", code: 124, alpha2Code: "CA", alpha3Code: "CAN", phoneExtension: "1"),

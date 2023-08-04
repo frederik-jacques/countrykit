@@ -8,7 +8,6 @@
 import Foundation
 
 public struct Country {
-    
     /// The continent for this country.
     public let continent: Continent
     
@@ -36,7 +35,27 @@ public struct Country {
     
     /// The phone extension for the country.
     public let phoneExtension: String
-    
+
+    public init(
+        continent: Continent,
+        region: Region,
+        subregion: Subregion? = nil,
+        name: String,
+        code: Int,
+        alpha2Code: String,
+        alpha3Code: String,
+        phoneExtension: String
+    ) {
+        self.continent = continent
+        self.region = region
+        self.subregion = subregion
+        self.name = name
+        self.code = code
+        self.alpha2Code = alpha2Code
+        self.alpha3Code = alpha3Code
+        self.phoneExtension = phoneExtension
+    }
+
     /// Get a localized translation for the country name.
     /// - Parameter locale: The locale to use
     /// - Returns: The localized country name (optional)

@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import CountryKit
+import CountryKit
 
 final class AmericasContinentProviderTests: XCTestCase {
 
