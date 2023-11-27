@@ -8,7 +8,8 @@
 import Foundation
 
 public final class WorldProvider: CountryProvidable {
-    
+    public init() {}
+
     // MARK: - Properties
     public lazy var countries: [Country] = {
         return africanCountriesProvider.countries +

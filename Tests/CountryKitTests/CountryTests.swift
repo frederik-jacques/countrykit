@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import CountryKit
+import CountryKit
 
 final class CountryTests: XCTestCase {
 
@@ -57,4 +57,13 @@ final class CountryTests: XCTestCase {
         XCTAssertEqual(sut.translation(for: locale), "Belgien")
     }
     
+    func test_emoji_good() throws {
+        let sut = Country(continent: .europe, region: .westernEurope, subregion: nil, name: "Belgium", code: 56, alpha2Code: "BE", alpha3Code: "BEL", phoneExtension: "32")
+        XCTAssertEqual("🇧🇪", sut.flagEmoji)
+    }
+
+    func test_emoji_bad() throws {
+        let sut = Country(continent: .europe, region: .westernEurope, subregion: nil, name: "Belgium", code: 56, alpha2Code: "NO SUCH EMOJI FLAG", alpha3Code: "BEL", phoneExtension: "32")
+        XCTAssertEqual("❓", sut.flagEmoji)
+    }
 }
