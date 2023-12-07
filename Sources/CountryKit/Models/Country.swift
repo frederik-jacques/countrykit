@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Country {
+public struct Country: Hashable {
     /// The continent for this country.
     public let continent: Continent
     
