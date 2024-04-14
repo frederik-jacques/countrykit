@@ -11,7 +11,7 @@ public enum Continent: String, CaseIterable, CustomStringConvertible {
 
     case africa = "Africa"
     case americas = "Americas"
-    case antartica = "Antarctica"
+    case antarctica = "Antarctica"
     case asia = "Asia"
     case europe = "Europe"
     case oceania = "Oceania"
@@ -26,7 +26,7 @@ public enum Continent: String, CaseIterable, CustomStringConvertible {
             return 1
         case .americas:
             return 19
-        case .antartica:
+        case .antarctica:
             return 10
         case .asia:
             return 142

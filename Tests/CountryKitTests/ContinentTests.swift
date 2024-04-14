@@ -24,7 +24,7 @@ final class ContinentTests: XCTestCase {
         let expected = [
             Continent.africa,
             Continent.americas,
-            Continent.antartica,
+            Continent.antarctica,
             Continent.asia,
             Continent.europe,
             Continent.oceania
