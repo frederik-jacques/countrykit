@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Country: Hashable {
+public struct Country: Hashable, Identifiable {
     /// The continent for this country.
     public let continent: Continent
     
@@ -23,7 +23,8 @@ public struct Country: Hashable {
     
     /// The country code.
     public let code: Int
-    
+    public var id: Int { code }
+
     /// The two-letter country code defined in ISO 3166-1.
     public let alpha2Code: String
     
