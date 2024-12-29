@@ -66,4 +66,27 @@ final class CountryTests: XCTestCase {
         let sut = Country(continent: .europe, region: .westernEurope, subregion: nil, name: "Belgium", code: 56, alpha2Code: "NO SUCH EMOJI FLAG", alpha3Code: "BEL", phoneExtension: "32")
         XCTAssertEqual("❓", sut.flagEmoji)
     }
+
+    func test_json_roundtrip() throws {
+        let sut = Country(continent: .europe, region: .westernEurope, subregion: nil, name: "Belgium", code: 56, alpha2Code: "BE", alpha3Code: "BEL", phoneExtension: "32")
+
+        let encoder = JSONEncoder()
+        let countryData = try encoder.encode(sut)
+
+        guard let json = String(data: countryData, encoding: .utf8) else {
+            XCTFail("Could not convert continent data to JSON")
+            return
+        }
+
+        XCTAssertEqual("{\"code\":56}", json)
+
+        let decoder = JSONDecoder()
+        guard let jsonData = json.data(using: .utf8) else {
+            XCTFail("Could not decode '\(json)'")
+            return
+        }
+
+        let country = try decoder.decode(Country.self, from: jsonData)
+        XCTAssertEqual("Belgium", country.name)
+    }
 }

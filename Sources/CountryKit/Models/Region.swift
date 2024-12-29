@@ -7,69 +7,54 @@
 
 import Foundation
 
-public enum Region {
+public enum Region: Int, CustomStringConvertible, Identifiable, Codable {
+    case northernAfrica = 15
+    case subsaharanAfrica = 202
     
-    case northernAfrica
-    case subsaharanAfrica
-    
-    case northAmerica
-    case latinAmericaAndCaribbean
+    case northAmerica = 3
+    case latinAmericaAndCaribbean = 419
         
-    case easternAsia
-    case southernAsia
-    case southEasternAsia
-    case centralAsia
-    case westernAsia
+    case easternAsia = 30
+    case southernAsia = 34
+    case southEasternAsia = 35
+    case centralAsia = 143
+    case westernAsia = 145
     
-    case southernEurope
-    case easternEurope
-    case northernEurope
-    case westernEurope
+    case southernEurope = 39
+    case easternEurope = 151
+    case northernEurope = 154
+    case westernEurope = 155
     
-    case australiaAndNewZealand
-    case melanesia
-    case microneasia
-    case polynesia
+    case australiaAndNewZealand = 53
+    case melanesia = 54
+    case microneasia = 57
+    case polynesia = 61
     
     /// M-49 code for the region
     /// More info: https://en.wikipedia.org/wiki/UN_M49
-    var code: Int {
-        switch self {
-        case .northernAfrica:
-            return 15
-        case .subsaharanAfrica:
-            return 202
-        case .latinAmericaAndCaribbean:
-            return 419
-        case .northAmerica:
-            return 003
-        case .easternAsia:
-            return 030
-        case .southernAsia:
-            return 034
-        case .southEasternAsia:
-            return 035
-        case .centralAsia:
-            return 143
-        case .westernAsia:
-            return 145
-        case .southernEurope:
-            return 39
-        case .easternEurope:
-            return 151
-        case .northernEurope:
-            return 154
-        case .westernEurope:
-            return 155
-        case .australiaAndNewZealand:
-            return 53
-        case .melanesia:
-            return 54
-        case .microneasia:
-            return 57
-        case .polynesia:
-            return 61
+    var code: Int { rawValue }
+
+    public var id: Int { rawValue }
+
+    public var description: String {
+        return switch self {
+        case .northernAfrica: "North Africa"
+        case .subsaharanAfrica: "Sub-Saharan Africa"
+        case .northAmerica: "North America"
+        case .latinAmericaAndCaribbean: "Latin America & the Caribbean"
+        case .easternAsia: "East Asia"
+        case .southernAsia: "South Asia"
+        case .southEasternAsia: "South East Asia"
+        case .centralAsia: "Central Asia"
+        case .westernAsia: "Western Asia"
+        case .southernEurope: "Southern Europe"
+        case .easternEurope: "Eastern Europe"
+        case .northernEurope: "Northern Europe"
+        case .westernEurope: "Western Europe"
+        case .australiaAndNewZealand: "Australia & New Zealand"
+        case .melanesia: "Melanesia"
+        case .microneasia: "Micronesia"
+        case .polynesia: "Polynesia"
         }
     }
-    
 }

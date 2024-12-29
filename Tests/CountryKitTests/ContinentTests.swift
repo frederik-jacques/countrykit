@@ -11,15 +11,6 @@ import XCTest
 import CountryKit
 
 final class ContinentTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
     func test_enumerability() throws {
         let expected = [
             Continent.africa,
@@ -36,5 +27,26 @@ final class ContinentTests: XCTestCase {
     func test_stringness() throws {
         XCTAssertEqual("Oceania", Continent.oceania.rawValue)
         XCTAssertEqual("Oceania", "\(Continent.oceania)")
+    }
+
+    func test_json_roundtrip() throws {
+        let encoder = JSONEncoder()
+        let continentData = try encoder.encode(Continent.africa)
+
+        guard let json = String(data: continentData, encoding: .utf8) else {
+            XCTFail("Could not convert continent data to JSON")
+            return
+        }
+
+        XCTAssertEqual("\"Africa\"", json)
+
+        let decoder = JSONDecoder()
+        guard let jsonData = json.data(using: .utf8) else {
+            XCTFail("Could not decode '\(json)'")
+            return
+        }
+
+        let continent = try decoder.decode(Continent.self, from: jsonData)
+        XCTAssertEqual("Africa", continent.description)
     }
 }

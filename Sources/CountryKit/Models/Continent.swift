@@ -12,7 +12,8 @@ public enum Continent:
     CaseIterable,
     CustomStringConvertible,
     Identifiable,
-    Hashable
+    Hashable,
+    Codable
 {
     case africa = "Africa"
     case americas = "Americas"

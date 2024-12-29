@@ -7,7 +7,11 @@
 
 import Foundation
 
-public struct Country: Hashable, Identifiable {
+public struct Country: Hashable, Identifiable, Decodable {
+    enum CodingKeys: String, CodingKey, CaseIterable {
+        case code
+    }
+
     /// The continent for this country.
     public let continent: Continent
     
@@ -38,6 +42,39 @@ public struct Country: Hashable, Identifiable {
     public let phoneExtension: String
 
     public var flagEmoji: Character?
+
+    public init(from decoder: any Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        guard let _code = try values.decodeIfPresent(Int.self, forKey: .code) else {
+            throw DecodingError.keyNotFound(
+                CodingKeys.code,
+                .init(
+                    codingPath: [CodingKeys.code],
+                    debugDescription: "Missing country code"
+                )
+            )
+        }
+
+        guard let found = WorldProvider().get(countryCode: _code) else {
+            throw DecodingError.valueNotFound(
+                Int.self,
+                .init(
+                    codingPath: [CodingKeys.code],
+                    debugDescription: "Unknown country code '\(_code)'"
+                )
+            )
+        }
+
+        self.continent = found.continent
+        self.region = found.region
+        self.subregion = found.subregion
+        self.name = found.name
+        self.code = found.code
+        self.alpha2Code = found.alpha2Code
+        self.alpha3Code = found.alpha3Code
+        self.phoneExtension = found.phoneExtension
+        self.flagEmoji = found.flagEmoji
+    }
 
     public init(
         continent: Continent,
@@ -86,3 +123,9 @@ public struct Country: Hashable, Identifiable {
     }
 }
 
+extension Country: Encodable {
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(code, forKey: .code)
+    }
+}
