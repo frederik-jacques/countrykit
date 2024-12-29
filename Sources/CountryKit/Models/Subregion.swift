@@ -8,7 +8,7 @@
 import Foundation
 
 public enum Subregion: Int, CustomStringConvertible, Identifiable, Codable {
-    
+
     case westernAfrica = 11
     case easternAfrica = 14
     case middleAfrica = 17
@@ -18,7 +18,7 @@ public enum Subregion: Int, CustomStringConvertible, Identifiable, Codable {
     case centralAmerica = 13
     case caribbean = 29
     case channelIslands = 830
-    
+
     /// M-49 code for the subregion
     /// More info: https://en.wikipedia.org/wiki/UN_M49
     var code: Int { rawValue }

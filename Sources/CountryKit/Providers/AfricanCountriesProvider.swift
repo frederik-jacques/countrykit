@@ -74,7 +74,7 @@ public struct AfricanCountriesProvider: CountryProvidable {
         Country(continent: .africa, region: .subsaharanAfrica, subregion: .southernAfrica, name: "Lesotho", code: 426, alpha2Code: "LS", alpha3Code: "LSO", phoneExtension: "266"),
         Country(continent: .africa, region: .subsaharanAfrica, subregion: .southernAfrica, name: "Namibia", code: 516, alpha2Code: "NA", alpha3Code: "NAM", phoneExtension: "264"),
         Country(continent: .africa, region: .subsaharanAfrica, subregion: .southernAfrica, name: "South Africa", code: 710, alpha2Code: "ZA", alpha3Code: "ZAF", phoneExtension: "27"),
-        Country(continent: .africa, region: .subsaharanAfrica, subregion: .southernAfrica, name: "Swaziland", code: 748, alpha2Code: "SZ", alpha3Code: "SWZ", phoneExtension: "268"),
+        Country(continent: .africa, region: .subsaharanAfrica, subregion: .southernAfrica, name: "Swaziland", code: 748, alpha2Code: "SZ", alpha3Code: "SWZ", phoneExtension: "268")
     ]
-    
+
 }

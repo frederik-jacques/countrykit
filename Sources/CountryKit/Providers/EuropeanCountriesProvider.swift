@@ -67,5 +67,5 @@ public struct EuropeanCountriesProvider: CountryProvidable {
         Country(continent: .europe, region: .westernEurope, subregion: nil, name: "Netherlands", code: 528, alpha2Code: "NL", alpha3Code: "NLD", phoneExtension: "31"),
         Country(continent: .europe, region: .westernEurope, subregion: nil, name: "Switzerland", code: 756, alpha2Code: "CH", alpha3Code: "CHE", phoneExtension: "41")
     ]
-    
+
 }
