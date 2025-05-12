@@ -65,7 +65,7 @@ public struct AsianCountriesProvider: CountryProvidable {
         Country(continent: .asia, region: .westernAsia, subregion: nil, name: "Syrian Arab Republic", code: 760, alpha2Code: "SY", alpha3Code: "SYR", phoneExtension: "963"),
         Country(continent: .asia, region: .westernAsia, subregion: nil, name: "Turkey", code: 792, alpha2Code: "TR", alpha3Code: "TUR", phoneExtension: "90"),
         Country(continent: .asia, region: .westernAsia, subregion: nil, name: "United Arab Emirates", code: 784, alpha2Code: "AE", alpha3Code: "ARE", phoneExtension: "971"),
-        Country(continent: .asia, region: .westernAsia, subregion: nil, name: "Yemen", code: 887, alpha2Code: "YE", alpha3Code: "YEM", phoneExtension: "967"),
+        Country(continent: .asia, region: .westernAsia, subregion: nil, name: "Yemen", code: 887, alpha2Code: "YE", alpha3Code: "YEM", phoneExtension: "967")
     ]
-    
+
 }

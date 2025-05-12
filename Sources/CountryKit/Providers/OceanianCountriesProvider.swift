@@ -17,13 +17,13 @@ public struct OceanianCountriesProvider: CountryProvidable {
         Country(continent: .oceania, region: .australiaAndNewZealand, subregion: nil, name: "Christmas Island", code: 162, alpha2Code: "CX", alpha3Code: "CXR", phoneExtension: "61 (8 9164)"),
         Country(continent: .oceania, region: .australiaAndNewZealand, subregion: nil, name: "Cocos (Keeling) Islands", code: 166, alpha2Code: "CC", alpha3Code: "CCK", phoneExtension: "61 (8 9162)"),
         Country(continent: .oceania, region: .australiaAndNewZealand, subregion: nil, name: "Heard Island and McDonald Islands", code: 334, alpha2Code: "HM", alpha3Code: "HMD", phoneExtension: ""),
-        
+
         Country(continent: .oceania, region: .melanesia, subregion: nil, name: "Solomon Islands", code: 90, alpha2Code: "SB", alpha3Code: "SLB", phoneExtension: "677"),
         Country(continent: .oceania, region: .melanesia, subregion: nil, name: "Fiji", code: 242, alpha2Code: "FJ", alpha3Code: "FJI", phoneExtension: "679"),
         Country(continent: .oceania, region: .melanesia, subregion: nil, name: "New Caledonia", code: 540, alpha2Code: "NC", alpha3Code: "NCL", phoneExtension: "687"),
         Country(continent: .oceania, region: .melanesia, subregion: nil, name: "Vanuatu", code: 548, alpha2Code: "VU", alpha3Code: "VUT", phoneExtension: "678"),
         Country(continent: .oceania, region: .melanesia, subregion: nil, name: "Papua New Guinea", code: 598, alpha2Code: "PG", alpha3Code: "PNG", phoneExtension: "675"),
-        
+
         Country(continent: .oceania, region: .microneasia, subregion: nil, name: "Kiribati", code: 296, alpha2Code: "KI", alpha3Code: "KIR", phoneExtension: "686"),
         Country(continent: .oceania, region: .microneasia, subregion: nil, name: "Guam", code: 316, alpha2Code: "GU", alpha3Code: "GUM", phoneExtension: "1 (671)"),
         Country(continent: .oceania, region: .microneasia, subregion: nil, name: "Nauru", code: 520, alpha2Code: "NR", alpha3Code: "NRU", phoneExtension: "674"),
@@ -32,7 +32,7 @@ public struct OceanianCountriesProvider: CountryProvidable {
         Country(continent: .oceania, region: .microneasia, subregion: nil, name: "Micronesia (Federated States of)", code: 583, alpha2Code: "FM", alpha3Code: "FSM", phoneExtension: "691"),
         Country(continent: .oceania, region: .microneasia, subregion: nil, name: "Marshall Islands", code: 584, alpha2Code: "MH", alpha3Code: "MHL", phoneExtension: "692"),
         Country(continent: .oceania, region: .microneasia, subregion: nil, name: "Palau", code: 585, alpha2Code: "PW", alpha3Code: "PLW", phoneExtension: "680"),
-        
+
         Country(continent: .oceania, region: .polynesia, subregion: nil, name: "American Samoa", code: 16, alpha2Code: "AS", alpha3Code: "ASM", phoneExtension: "1 (684)"),
         Country(continent: .oceania, region: .polynesia, subregion: nil, name: "Cook Islands", code: 184, alpha2Code: "CK", alpha3Code: "COK", phoneExtension: "682"),
         Country(continent: .oceania, region: .polynesia, subregion: nil, name: "French Polynesia", code: 258, alpha2Code: "PF", alpha3Code: "PYF", phoneExtension: "689"),
@@ -42,7 +42,7 @@ public struct OceanianCountriesProvider: CountryProvidable {
         Country(continent: .oceania, region: .polynesia, subregion: nil, name: "Tokelau", code: 772, alpha2Code: "TK", alpha3Code: "TKL", phoneExtension: "690"),
         Country(continent: .oceania, region: .polynesia, subregion: nil, name: "Tonga", code: 776, alpha2Code: "TO", alpha3Code: "TON", phoneExtension: "676"),
         Country(continent: .oceania, region: .polynesia, subregion: nil, name: "Tuvalu", code: 798, alpha2Code: "TV", alpha3Code: "TUV", phoneExtension: "688"),
-        Country(continent: .oceania, region: .polynesia, subregion: nil, name: "Wallis and Futuna", code: 876, alpha2Code: "WF", alpha3Code: "WLF", phoneExtension: "681"),
+        Country(continent: .oceania, region: .polynesia, subregion: nil, name: "Wallis and Futuna", code: 876, alpha2Code: "WF", alpha3Code: "WLF", phoneExtension: "681")
     ]
-    
+
 }

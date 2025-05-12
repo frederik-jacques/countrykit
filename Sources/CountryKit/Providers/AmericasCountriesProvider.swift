@@ -70,7 +70,7 @@ public struct AmericasCountriesProvider: CountryProvidable {
         Country(continent: .americas, region: .latinAmericaAndCaribbean, subregion: .caribbean, name: "Trinidad and Tobago", code: 780, alpha2Code: "TT", alpha3Code: "TTO", phoneExtension: "1 (868)"),
         Country(continent: .americas, region: .latinAmericaAndCaribbean, subregion: .caribbean, name: "Turks and Caicos Islands", code: 796, alpha2Code: "TC", alpha3Code: "TCA", phoneExtension: "1 (649)"),
         Country(continent: .americas, region: .latinAmericaAndCaribbean, subregion: .caribbean, name: "Virgin Islands (British)", code: 92, alpha2Code: "VG", alpha3Code: "VGB", phoneExtension: "1 (284)"),
-        Country(continent: .americas, region: .latinAmericaAndCaribbean, subregion: .caribbean, name: "Virgin Islands (U.S.)", code: 850, alpha2Code: "VI", alpha3Code: "VIR", phoneExtension: "1 (340)"),
+        Country(continent: .americas, region: .latinAmericaAndCaribbean, subregion: .caribbean, name: "Virgin Islands (U.S.)", code: 850, alpha2Code: "VI", alpha3Code: "VIR", phoneExtension: "1 (340)")
     ]
-    
+
 }

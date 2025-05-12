@@ -17,10 +17,10 @@ final class CountryTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-    
+
     func test_init_fills_all_properties() throws {
         let sut = Country(continent: .africa, region: .northernAfrica, subregion: .middleAfrica, name: "Test Name", code: 42, alpha2Code: "Test Alpha 2 Code", alpha3Code: "Test Alpha 3 Code", phoneExtension: "1")
-        
+
         XCTAssertEqual(sut.continent, Continent.africa)
         XCTAssertEqual(sut.region, Region.northernAfrica)
         XCTAssertEqual(sut.subregion, Subregion.middleAfrica)
@@ -30,33 +30,33 @@ final class CountryTests: XCTestCase {
         XCTAssertEqual(sut.alpha3Code, "Test Alpha 3 Code")
         XCTAssertEqual(sut.phoneExtension, "1")
     }
-    
+
     func test_iso31662_code_is_calculated_correctly() throws {
         let sut = Country(continent: .africa, region: .northernAfrica, subregion: .middleAfrica, name: "Test Name", code: 42, alpha2Code: "Test Alpha 2 Code", alpha3Code: "Test Alpha 3 Code", phoneExtension: "1")
         XCTAssertEqual(sut.iso31662Code, "ISO 3166-2:Test Alpha 2 Code")
     }
-    
+
     func test_dutch_localization() throws {
         let locale = Locale(identifier: "nl_NL")
-        
+
         let sut = Country(continent: .europe, region: .westernEurope, subregion: nil, name: "Belgium", code: 56, alpha2Code: "BE", alpha3Code: "BEL", phoneExtension: "32")
         XCTAssertEqual(sut.translation(for: locale), "België")
     }
-    
+
     func test_french_localization() throws {
         let locale = Locale(identifier: "fr")
-        
+
         let sut = Country(continent: .europe, region: .westernEurope, subregion: nil, name: "Belgium", code: 56, alpha2Code: "BE", alpha3Code: "BEL", phoneExtension: "32")
         XCTAssertEqual(sut.translation(for: locale), "Belgique")
     }
-    
+
     func test_german_localization() throws {
         let locale = Locale(identifier: "de")
-        
+
         let sut = Country(continent: .europe, region: .westernEurope, subregion: nil, name: "Belgium", code: 56, alpha2Code: "BE", alpha3Code: "BEL", phoneExtension: "32")
         XCTAssertEqual(sut.translation(for: locale), "Belgien")
     }
-    
+
     func test_emoji_good() throws {
         let sut = Country(continent: .europe, region: .westernEurope, subregion: nil, name: "Belgium", code: 56, alpha2Code: "BE", alpha3Code: "BEL", phoneExtension: "32")
         XCTAssertEqual("🇧🇪", sut.flagEmoji)
@@ -65,5 +65,28 @@ final class CountryTests: XCTestCase {
     func test_emoji_bad() throws {
         let sut = Country(continent: .europe, region: .westernEurope, subregion: nil, name: "Belgium", code: 56, alpha2Code: "NO SUCH EMOJI FLAG", alpha3Code: "BEL", phoneExtension: "32")
         XCTAssertEqual("❓", sut.flagEmoji)
+    }
+
+    func test_json_roundtrip() throws {
+        let sut = Country(continent: .europe, region: .westernEurope, subregion: nil, name: "Belgium", code: 56, alpha2Code: "BE", alpha3Code: "BEL", phoneExtension: "32")
+
+        let encoder = JSONEncoder()
+        let countryData = try encoder.encode(sut)
+
+        guard let json = String(data: countryData, encoding: .utf8) else {
+            XCTFail("Could not convert continent data to JSON")
+            return
+        }
+
+        XCTAssertEqual("{\"code\":56}", json)
+
+        let decoder = JSONDecoder()
+        guard let jsonData = json.data(using: .utf8) else {
+            XCTFail("Could not decode '\(json)'")
+            return
+        }
+
+        let country = try decoder.decode(Country.self, from: jsonData)
+        XCTAssertEqual("Belgium", country.name)
     }
 }

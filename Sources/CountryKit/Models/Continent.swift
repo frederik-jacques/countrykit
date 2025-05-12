@@ -7,11 +7,16 @@
 
 import Foundation
 
-public enum Continent: String, CaseIterable, CustomStringConvertible {
-
+public enum Continent:
+    String,
+    CaseIterable,
+    CustomStringConvertible,
+    Identifiable,
+    Hashable,
+    Codable {
     case africa = "Africa"
     case americas = "Americas"
-    case antartica = "Antarctica"
+    case antarctica = "Antarctica"
     case asia = "Asia"
     case europe = "Europe"
     case oceania = "Oceania"
@@ -20,13 +25,13 @@ public enum Continent: String, CaseIterable, CustomStringConvertible {
 
     /// M-49 code for the continent
     /// More info: https://en.wikipedia.org/wiki/UN_M49
-    var code: Int {
+    public var code: Int {
         switch self {
         case .africa:
             return 1
         case .americas:
             return 19
-        case .antartica:
+        case .antarctica:
             return 10
         case .asia:
             return 142
@@ -36,6 +41,5 @@ public enum Continent: String, CaseIterable, CustomStringConvertible {
             return 9
         }
     }
-
-
+    public var id: Int { code }
 }

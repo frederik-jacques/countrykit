@@ -18,17 +18,17 @@ public final class WorldProvider: CountryProvidable {
         europeanCountriesProvider.countries +
         oceanianCountriesProvider.countries
     }()
-    
+
     private let africanCountriesProvider = AfricanCountriesProvider()
     private let americasCountriesProvider = AmericasCountriesProvider()
     private let asianCountriesProvider = AsianCountriesProvider()
     private let europeanCountriesProvider = EuropeanCountriesProvider()
     private let oceanianCountriesProvider = OceanianCountriesProvider()
-    
+
     // MARK: - Lifecycle methods
-    
+
     // MARK: - Public methods
-        
+
     // MARK: - Private methods
-    
+
 }
